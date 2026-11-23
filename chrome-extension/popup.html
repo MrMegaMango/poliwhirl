@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voice Music Pause</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Voice Music Pause</h1>
+  <label class="toggle"><span>Pause music during assistant app audio</span><input id="enabled" type="checkbox" checked></label>
+  <p id="status" role="status">Checking the local helper…</p>
+  <p class="note">Works with YouTube Music. Playback resumes only if this extension paused it and you have not changed the track or playback.</p>
+  <p class="note">Only activity status is received. This extension never receives or records audio.</p>
+  <script src="popup.js"></script>
+</body>
+</html>

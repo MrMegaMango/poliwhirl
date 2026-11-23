@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Voice Music Pause",
+  "version": "1.0.0",
+  "description": "Pause YouTube Music while the local voice helper detects assistant audio, then restore only playback this extension paused.",
+  "permissions": ["storage"],
+  "host_permissions": ["http://127.0.0.1:49753/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "content_scripts": [{
+    "matches": ["https://music.youtube.com/*"],
+    "js": ["state-machine.js", "content.js"],
+    "run_at": "document_idle",
+    "all_frames": false
+  }],
+  "action": { "default_title": "Voice Music Pause", "default_popup": "popup.html" }
+}
